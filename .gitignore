@@ -1,0 +1,9 @@
+RegnForm.pdf
+TT_WIP.pdf
+*.docx
+*.doc
+*.odt
+*.odt#
+*.exe
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*

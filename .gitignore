@@ -7,3 +7,6 @@ TT_WIP.pdf
 *.exe
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+/CO304_Artificial_Intelligence/Assignment_1
+/CO306_Computer_Networks/CN_Lab/runfiles
+/CO302_Compiler_Design/CD_Lab/runfiles

@@ -6,7 +6,7 @@
 ![Algo_1](Outputs/algo_1.PNG)
 ![Algo_1_2](Outputs/algo_2.PNG)
 ###2. Implement the improved implementation where the grid is a magic square with the sum of 15.
-![Algo_2](/Outputs/algo_3.PNG)
+![Algo_2](Outputs/algo_3.PNG)
 
 The code is in [Q1.py](Q1.py) and [Q2.py](Q2.py)
 

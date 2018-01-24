@@ -35,6 +35,6 @@ int main()
 	cout << "The string after stuffing is : ";
 	cout << "01111110 ";
 	cout << S;
-	cout << "01111110" << endl;
+	cout << " 01111110" << endl;
 	return 0;
 }

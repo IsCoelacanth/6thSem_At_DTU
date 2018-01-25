@@ -31,10 +31,11 @@ int main()
 			i += 6;
 		}
 	}
-
+	S = "01111110 " + S;
+	S = S + " 01111110";
 	cout << "The string after stuffing is : ";
-	cout << "01111110 ";
-	cout << S;
-	cout << " 01111110" << endl;
+//	cout << "01111110 ";
+	cout << S << endl;
+//	cout << " 01111110" << endl;
 	return 0;
 }

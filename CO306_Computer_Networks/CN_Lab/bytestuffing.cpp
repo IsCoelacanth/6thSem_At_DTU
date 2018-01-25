@@ -3,12 +3,16 @@
 
 using namespace std;
 
+
+//Funtion to push the delimiter into the output stream.
 int stuff_data(vector<int> &a,vector<int> &delim)
 {
     for(int i=0;i<delim.size();i++)
         a.push_back(delim[i]);
 }
 
+//Pattern Matching function for checking if the sequence contains 
+// The delimiter
 int check_match(vector<int> &a, vector<int> &delim, int match_index)
 {
     for(int i=match_index,j=0; i<a.size() && j<delim.size();i++,j++)
@@ -27,20 +31,20 @@ int main()
     vector<int> a,b,delim;
     int i,j,k,n,c=0,m=0,temp,dm=0;
 
-    cout<<"Enter the delimiter size\n";
+
+    cout<<"Enter the delimiter size : ";
     cin>>m;
-    cout<<"Enter the delimiter sequence\n";
+    cout<<"Enter the delimiter sequence : ";
     for(i=0;i<m;i++)
     {
         cin>>temp;
         delim.push_back(temp);
     }
-
-    //--------------------------------------------------------//
+    //Get the sequence
     cout<<"\nEnter the number of bits\n";
     cin>>n;
     cout<<"Enter the bit sequence\n";
-
+	
     stuff_data(a,delim);
 
     for(i=0;i<n;i++)

@@ -3,16 +3,12 @@
 
 using namespace std;
 
-
-//Funtion to push the delimiter into the output stream.
 int stuff_data(vector<int> &a,vector<int> &delim)
 {
     for(int i=0;i<delim.size();i++)
         a.push_back(delim[i]);
 }
 
-//Pattern Matching function for checking if the sequence contains 
-// The delimiter
 int check_match(vector<int> &a, vector<int> &delim, int match_index)
 {
     for(int i=match_index,j=0; i<a.size() && j<delim.size();i++,j++)
@@ -29,23 +25,23 @@ int check_match(vector<int> &a, vector<int> &delim, int match_index)
 int main()
 {
     vector<int> a,b,delim;
-    int i,j,k,n,c=0,m=0,temp,dm=0;
+    int i,n,m,temp;
 
-
-    cout<<"Enter the delimiter size : ";
+    cout<<"Enter the delimiter size\n";
     cin>>m;
-    cout<<"Enter the delimiter sequence : ";
+    cout<<"Enter the delimiter sequence\n";
     for(i=0;i<m;i++)
     {
         cin>>temp;
         delim.push_back(temp);
     }
-    //Get the sequence
+
+    //--------------------------------------------------------//
     cout<<"\nEnter the number of bits\n";
     cin>>n;
     cout<<"Enter the bit sequence\n";
-	
-    stuff_data(a,delim);
+
+    stuff_data(b,delim);
 
     for(i=0;i<n;i++)
     {
@@ -53,34 +49,13 @@ int main()
         a.push_back(temp);
     }
 
-    for(i=m;i<(n+m);i++)
+    for(i=0;i<n;i++)
     {
-        if(check_match(a,delim,i))
+        if((((a.size()-1) - i) > delim.size()) && check_match(a,delim,i))
         {
-            stuff_data(a,delim);
-        }
-        else
-        {
-            continue;
-        }
-    }
-
-    stuff_data(a,delim);
-
-    cout<<"Stuffed data\n";
-    for(i=0;i<a.size();i++)
-    {
-        cout<<a[i];
-    }
-    //---------------------------------------------------//
-    dm=0;
-    for(int i=m;i<(a.size()-m);i++)
-    {
-        if(check_match(a,delim,i))
-        {
-            for(int j=0;j<m;j++)
-                b.push_back(a[j]);
-            i = i + 2*m - 1;
+                stuff_data(b,delim);
+                stuff_data(b,delim);
+                i = i + m - 1;
         }
         else
         {
@@ -88,9 +63,31 @@ int main()
         }
     }
 
-    cout<<"\nDe-Stuffed data\n";
+    stuff_data(b,delim);
+
+    cout<<"Stuffed data\n";
     for(i=0;i<b.size();i++)
     {
-        cout<<b[i]<<" ";
+        cout<<b[i];
+    }
+    //---------------------------------------------------//
+    a.clear();
+    for(int i=m;i<(b.size()-m);i++)
+    {
+        if(check_match(b,delim,i))
+        {
+            stuff_data(a,delim);
+            i = i + 2*m - 1;
+        }
+        else
+        {
+            a.push_back(b[i]);
+        }
+    }
+
+    cout<<"\nDe-Stuffed data\n";
+    for(i=0;i<a.size();i++)
+    {
+        cout<<a[i]<<" ";
     }
 }

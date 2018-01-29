@@ -25,7 +25,7 @@ int check_match(vector<char> &a, vector<char> &delim, int match_index)
 int main()
 {
     vector<char> a,b,delim;
-    int i,j,k,n,m=0;
+    int i,n,m;
     char temp;
 
     cout<<"Enter the delimiter size\n";
@@ -42,7 +42,7 @@ int main()
     cin>>n;
     cout<<"Enter the character sequence\n";
 
-    stuff_data(a,delim);
+    stuff_data(b,delim);
 
     for(i=0;i<n;i++)
     {
@@ -50,33 +50,13 @@ int main()
         a.push_back(temp);
     }
 
-    for(i=m;i<(n+m);i++)
+    for(i=0;i<n;i++)
     {
-        if(check_match(a,delim,i))
+        if((((a.size()-1) - i) > delim.size()) && check_match(a,delim,i))
         {
-            stuff_data(a,delim);
-        }
-        else
-        {
-            continue;
-        }
-    }
-
-    stuff_data(a,delim);
-
-    cout<<"Stuffed data\n";
-    for(i=0;i<a.size();i++)
-    {
-        cout<<a[i];
-    }
-    //---------------------------------------------------//
-    for(int i=m;i<(a.size()-m);i++)
-    {
-        if(check_match(a,delim,i))
-        {
-            for(int j=0;j<m;j++)
-                b.push_back(a[j]);
-            i = i + 2*m - 1;
+                stuff_data(b,delim);
+                stuff_data(b,delim);
+                i = i + m - 1;
         }
         else
         {
@@ -84,9 +64,31 @@ int main()
         }
     }
 
-    cout<<"\nDe-Stuffed data\n";
+    stuff_data(b,delim);
+
+    cout<<"Stuffed data\n";
     for(i=0;i<b.size();i++)
     {
-        cout<<b[i]<<" ";
+        cout<<b[i];
+    }
+    //---------------------------------------------------//
+    a.clear();
+    for(int i=m;i<(b.size()-m);i++)
+    {
+        if(check_match(b,delim,i))
+        {
+            stuff_data(a,delim);
+            i = i + 2*m - 1;
+        }
+        else
+        {
+            a.push_back(b[i]);
+        }
+    }
+
+    cout<<"\nDe-Stuffed data\n";
+    for(i=0;i<a.size();i++)
+    {
+        cout<<a[i]<<" ";
     }
 }

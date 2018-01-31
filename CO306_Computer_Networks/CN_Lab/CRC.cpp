@@ -54,7 +54,23 @@ void encode( string data, string key)
 	string remainder = mod2div(appended, key);
 	string coded = data + remainder;
 	cout << "The remainder was : " << remainder << endl;
+
 	cout << "The encoded data is : " << coded << endl;
+}
+
+bool check_error(string data, string key)
+{
+	int key_len = key.length();
+	string appended = data;
+	for ( int i = 0 ; i < key_len - 1; i++)
+	{
+		appended.append("0");
+	}
+	string remainder = mod2div(appended, key);
+	for (int i = 0 ; i < remainder.length() ; i++)
+		if (remainder[i] == '1')
+			return false;
+	return true;
 }
 
 int main()
@@ -65,6 +81,21 @@ int main()
 	cout << "Enter the data : ";
 	cin >> data;
 	encode(data,key);
+	int flip;
+	cout << "Enter a bit to flip (to induce error in seq [0, " << data.length() <<"]) : ";
+	cin >> flip;
+	if (flip > -1 && flip < data.length())
+	{
+		if (data[flip] == '1')
+			data[flip] = '0';
+		else
+			data[flip] = '1';
+	}
+	cout << "Checking for transmission errors on received singal : " << data << endl;
+	if (check_error(data,key))
+		cout << "Errors in transmission!" << endl;
+	else 
+		cout << "No Errors found" << endl;
 	return 0;
 }
 	

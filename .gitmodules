@@ -1,3 +1,6 @@
 [submodule "CO304_Artificial_Intelligence/Rishab/AI-py"]
 	path = CO304_Artificial_Intelligence/Rishab/AI-py
 	url = https://github.com/zeerorg/AI-py.git
+[submodule "CO306_Computer_Networks/Rishabh"]
+	path = CO306_Computer_Networks/Rishabh
+	url = https://github.com/zeerorg/CN-py.git

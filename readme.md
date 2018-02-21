@@ -45,20 +45,24 @@
 
 ## 3. Computer Networks(CO - 306)  
 #### Recommended books :
-*** TBD ***   
+1. [Data Communications and Networking - Forouzan](https://goo.gl/8iBbw9) [[PDF]](https://goo.gl/2q1kz1)
+* The recommended book for the course. Use it along with its PPTs. Notes are useless. You're on your own in this subject.
+
+2. [Computer Networks - Tanenbaum](https://goo.gl/jMN38f) [[PDF]](https://goo.gl/XdwyNU)
+* Secondary book for the subject. Some topics are better here than Forouzan.
 
 #### Details :  
 
-*** TBD ***
+* You're on your own kiddo.
 
 ## 4. Cyber Forensics (IT - 312)  
 #### Recommended books :  
 
-*** TBD ***  
+lol wut
 
 #### Details :
 
-*** TBD ***
+ggwp
 
 ## 5. Parallel Algorithms (SE-324)  
 #### Recommended books :

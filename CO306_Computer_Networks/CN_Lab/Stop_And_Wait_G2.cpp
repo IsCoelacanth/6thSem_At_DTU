@@ -4,7 +4,7 @@
 using namespace std;
 #define TOUT 5
 #define M_Seq 1
-#define M_Pack 45
+#define M_Pack 15
 //#define increment(k) if(k<M_Seq) k++; else k = 0;
 
 void increment(int &k)
@@ -47,7 +47,7 @@ void from_net_layer(packet &bff)
 
 void to_phy_layer(frame &s)
 {
-	s.error = rand() % 10; //The probability of getting an error is 0.10
+	s.error = rand() % 4; //The probability of getting an error is 0.10
 	DATA = s; // The data is now on the physical layer
 }
 
@@ -179,11 +179,13 @@ void reciever()
 
 int main()
 {
+	cout << "Sending 15 packets at the probability of it being lost at 25\%" << endl;
 	while (!dc)
 	{
 		sender();
 		Sleep(200);
 		reciever();
 	}
+	cout << "All packets successfully sent" << endl;
 	return 0;
 }

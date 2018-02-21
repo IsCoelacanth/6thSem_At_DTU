@@ -28,16 +28,20 @@
 
 #### Details :  
 * The lab work and code files can be found [here](/CO302_Compiler_Design/CD_Lab/). The work in divided into two, in-lab work and in-file work. The in lab work is more complex and project-ish, while the in file work follows the university programs list. The in-lab work goes well beyond the university list.
-* Class notes are detailed and will be available soon [-> HERE <-]
-
+* Class notes are detailed and are on the OneNote (if you're reading this then it means you have the access to the drive or the semester has ended and I've put em up here).
 ## 2. Artificial Intelligence (CO - 304)
 #### Recommended books :  
-
-*** TBD ***  
+1. [Artificial Intelligence - Rich, Knight](https://goo.gl/17bhgx)
+* This is the main text for the subject. It covers all topics stated in the syllabus and has decent explanation of all algorithms needed. 
+2. [A First Course in Artificial Intelligence - Deepak Khemani](https://goo.gl/xrLrsU)
+* This is the secret weapon book that only a few know of. Daya Gupta ma'ams notes are based off this and so are the ppts. Use this to thy best advantage.
+3. [Artificial Intelligence : A Modern Approach](https://goo.gl/HnzFsv) [[PDF]](https://goo.gl/4DWPg8)
+* The OG artificial intelligence book. This is the bible of the subject. If there's any topic anywhere that you can't understand, refer this.
 
 #### Details :  
-
-*** TBD ***  
+* There's no lab for this subject (IKR!?), but there's *"Frequent"* assignments which can be found [HERE](/CO304_Artificial_Intelligence/).
+* The class notes are on the OneNote book (if you're reading this then it means you have the access to the drive or the semester has ended and I've put em up here).
+* Recommended: Use class notes in conjunction with the book.
 
 ## 3. Computer Networks(CO - 306)  
 #### Recommended books :

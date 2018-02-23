@@ -1,3 +1,47 @@
+# AIM: To implement and analyze serial and parallel merge sort algorithm.
+
+## Introduction and Theory
+
+Merge sort is a divide-and-conquer algorithm based on the idea of breaking down a list into several sub-lists until each sublist consists of a single element and merging those sublists in a manner that results into a sorted list.
+
+**Idea:**
+
+- Divide the unsorted list into NN sublists, each containing N/2 element.
+- Take adjacent pairs of two singleton lists and merge them to form a list of 2 elements. NN will now convert into N/2N/2 lists of size 2.
+- Repeat the process till a single sorted list of obtained.
+
+While comparing two sublists for merging, the first element of both lists is taken into consideration. While sorting in ascending order, the element that is of a lesser value becomes a new element of the sorted list. This procedure is repeated until both the smaller sublists are empty and the new combined sublist comprises all the elements of both the sublists.
+
+The process is illustrated below
+
+![enter image description here](https://he-s3.s3.amazonaws.com/media/uploads/37deb43.jpg)
+
+>source : Hackerearth
+
+### Parallel Merge sort
+
+The divide step makes that segment of the list an independent piece till its merged back. Thus it is parallelized.
+
+## Algorithm
+
+```
+MergeSort(arr[], l,  r)
+If r > l
+     1. Find the middle point to divide the array into two halves:  
+             middle m = (l+r)/2
+     2. Call mergeSort for first half:   
+             Call mergeSort(arr, l, m)
+     3. Call mergeSort for second half:
+             Call mergeSort(arr, m+1, r)
+     4. Merge the two halves sorted in step 2 and 3:
+             Call merge(arr, l, m, r)
+```
+
+Complexity (Serial): O(nLogn)
+
+## Code
+
+```python
 import time
 import random
 import multiprocessing
@@ -97,3 +141,27 @@ def main():
 
 if __name__ == '__main__':
     main()
+```
+
+## Output
+
+![outp](../OutPuts/Merge_Sort_out.png)
+
+
+
+## Discussion
+
+From the graph below we can see that compared to the serial version the rate of growth of parallel implementation is much lower. It can also be seen that the time taken at lower input sizes in parallel is much larger than serial, this is due to the serial merge step and the resource allocation overhead.
+
+![graph](../OutPuts/Merge_Sort.png)
+
+## Findings and Learnings
+
+1. The parallel merge sort algorithms has a lower growth rate at higher order of input
+2. The initial high overhead of parallel version causes it to take a longer time for small input.
+3. The graphs show that parallel merge sort grows slower compared to serial thus is of complexity less than O(nLogn).
+
+
+
+
+

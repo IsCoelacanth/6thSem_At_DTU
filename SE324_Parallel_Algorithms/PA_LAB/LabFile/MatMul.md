@@ -80,7 +80,7 @@ if __name__ == '__main__':
 
 ## Output
 
-![output](../OutPuts/MatMul.PNG)
+![output](../OutPuts/MatMul.png)
 
 ## Discussion 
 

@@ -15,7 +15,7 @@ def main():
     num_cores = MP.cpu_count()
     print(num_cores)
     s = time.time()
-    res = Parallel(n_jobs=1000, backend="threading")(delayed(sqrt)(i) for i in ip)
+    res = Parallel(n_jobs=100, backend="threading")(delayed(sqrt)(i) for i in ip)
     e = time.time()
 
     print("Time taken parallely : ",e-s)

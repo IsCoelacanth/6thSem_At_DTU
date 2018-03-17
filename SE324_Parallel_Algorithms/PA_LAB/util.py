@@ -12,3 +12,7 @@ def GetMatrix(m1):
     for i in range(m1):
         mat.append(random.sample(range(100),m1))
     return mat
+
+def GetVector(m1):
+    arr = random.sample(range(1000),m1)
+    return arr

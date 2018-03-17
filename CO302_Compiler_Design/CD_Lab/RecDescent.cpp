@@ -60,13 +60,13 @@ void F()
 		}
 		else
 		{
-			cout << "Error in parsing, exiting" << endl;
+			cout << "expected ) got" << buffer[l] << " exiting" << endl;
 			exit(0);
 		}
 	}
 	else
 	{
-		cout << "Error in parsing, exiting" << endl;
+		cout << "expected 'id' got " << buffer[l] << " exiting" << endl;
 		exit(0);
 	}
 }

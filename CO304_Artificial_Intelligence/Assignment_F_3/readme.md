@@ -1,0 +1,1 @@
+1. Question 1 1st Intelligent algo in [here](../Assignment_1/Q2.py)

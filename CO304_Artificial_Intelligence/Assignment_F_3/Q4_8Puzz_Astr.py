@@ -195,28 +195,11 @@ def heur(puzzle, item_total_calc, total_calc):
 
     return total_calc(t)
 
-#some heuristic functions, the best being the standard manhattan distance in this case, as it comes
-#closest to maximizing the estimated distance while still being admissible.
 
 def h_manhattan(puzzle):
     return heur(puzzle,
                 lambda r, tr, c, tc: abs(tr - r) + abs(tc - c),
                 lambda t : t)
-
-def h_manhattan_lsq(puzzle):
-    return heur(puzzle,
-                lambda r, tr, c, tc: (abs(tr - r) + abs(tc - c))**2,
-                lambda t: math.sqrt(t))
-
-def h_linear(puzzle):
-    return heur(puzzle,
-                lambda r, tr, c, tc: math.sqrt(math.sqrt((tr - r)**2 + (tc - c)**2)),
-                lambda t: t)
-
-def h_linear_lsq(puzzle):
-    return heur(puzzle,
-                lambda r, tr, c, tc: (tr - r)**2 + (tc - c)**2,
-                lambda t: math.sqrt(t))
 
 def h_default(puzzle):
     return 0
@@ -230,16 +213,6 @@ def main():
     path.reverse()
     for i in path: 
         print (i)
-
-    print ("Solved with Manhattan distance exploring", count, "states")
-    path, count = p.solve(h_manhattan_lsq)
-    print ("Solved with Manhattan least squares exploring", count, "states")
-    path, count = p.solve(h_linear)
-    print ("Solved with linear distance exploring", count, "states")
-    path, count = p.solve(h_linear_lsq)
-    print ("Solved with linear least squares exploring", count, "states")
-#    path, count = p.solve(heur_default)
-#    print "Solved with BFS-equivalent in", count, "moves"
-
+    print("Path length = {} and states explored = {}".format(len(path), count))
 if __name__ == "__main__":
     main()

@@ -8,9 +8,9 @@ def main():
         t_prod = t_prod.split('->')
         t_prod = tuple(t_prod)
         prods.append(t_prod)
-    print(prods)
+    # print(prods)
     prod_d = {}
-    print(prods)
+    # print(prods)
     for pro in prods:
         if prod_d.get(pro[0]) is None:
             prod_d[pro[0]] = []

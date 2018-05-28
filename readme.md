@@ -62,19 +62,23 @@ lol wut
 
 #### Details :
 
-ggwp
+- as lol as things get
+- just read the ppts
+- pro tip AVOID AT ALL COSTS.
 
 ## 5. Parallel Algorithms (SE-324)  
 #### Recommended books :
 
-*** TBD ***  
+* The Design and Analysis of Parallel Algorithms - Salim G. Akl [[PDF]](https://goo.gl/GiL5Eo)
 
 #### Details :
-*** TBD ***  
+* Just pay attention in class and Don't slack off with the projects.
+* The lab work can be found [here](/SE324_Parallel_Algorithms/PA_LAB).
+* The assignment can be found [here](https://github.com/IsCoelacanth/PA_Assignment)
 
 ## 6. Technical Communication (HU - 302)  
 #### Recommended books :
-*** TBD ***  
+- Technical Communication - Principles & Practice - Meenakshi Raman, Sangeeta Sharma. (Book available for free reading on scribd)
 
 #### Details :
-*** TBD ***   
+- Brush up your synnonyms and antonyms (any major competitive exam prep is enough (gre, etc)).

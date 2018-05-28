@@ -2,6 +2,7 @@
 #include <string>
 #include <stdlib.h>
 #include <sstream>
+#include <time.h>
 using namespace std;
 
 char GetClass(string S)
@@ -54,8 +55,8 @@ void GetIDs(string S, char IpClass)
         while (j < S.length())
             HostID += S[j++];
 
-        cout << "Network ID in " << S << " is " << NetID << endl;
-        cout << "Host ID in " << S << " is " << HostID << endl;
+        cout << "Network ID : " << NetID << endl;
+        cout << "Host ID    : " << HostID << endl;
     }
 
     else if (IpClass == 'B')
@@ -70,9 +71,9 @@ void GetIDs(string S, char IpClass)
         j++;
 
         while( j < S.length())
-            HostID += S[j];
-        cout << "Network ID in "<< S << " is " << NetID << endl;
-        cout << "Host ID in "<< S << " is " << HostID << endl;
+            HostID += S[j++];
+        cout << "Network ID : " << NetID << endl;
+        cout << "Host ID    : " << HostID << endl;
     }
 
     else if (IpClass == 'C')
@@ -87,9 +88,9 @@ void GetIDs(string S, char IpClass)
         j++;
 
         while( j < S.length())
-            HostID += S[j];
-        cout << "Network ID in "<< S << " is " << NetID << endl;
-        cout << "Host ID in "<< S << " is " << HostID << endl;
+            HostID += S[j++];
+        cout << "Network ID : " << NetID << endl;
+        cout << "Host ID    : " << HostID << endl;
     }
 
     else
@@ -105,7 +106,7 @@ int main()
     int t;
     string S;
     char Class;
-    
+    srand (time(NULL));    
     cout << "Enter how many IPv4 addresses to test : ";
     cin >> t;
     while (t--)
@@ -120,8 +121,9 @@ int main()
         }
 
         Class = GetClass(S);
-        cout << "IPv4 Class : " << Class << endl;
+        cout <<"IP Address : " << S << endl << "IPv4 Class : " << Class << endl;
         GetIDs(S, Class);
+        cout << endl;
         S.clear();
     }
 }
